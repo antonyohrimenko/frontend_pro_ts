@@ -1,11 +1,15 @@
 import "./App.css";
-import SpaceMission from "./homeworks/Homework06/SpaceMission";
+import LoginForm from "./components/loginForm/LoginForm";
+// import SpaceMission from "./homeworks/Homework06/SpaceMission";
+import Lesson07 from "./lessons/lesson07/Lesson07";
 
 function App() {
   return (
     <>
       {/* <Lesson06 /> */}
-      <SpaceMission />
+      {/* <SpaceMission /> */}
+      <Lesson07 />
+      <LoginForm />
     </>
   );
 }

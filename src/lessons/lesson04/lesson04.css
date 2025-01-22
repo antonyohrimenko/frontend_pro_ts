@@ -1,0 +1,7 @@
+.counter {
+  margin-top: 10px;
+}
+
+.counter > span {
+  margin: 0, 10px;
+}

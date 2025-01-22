@@ -1,10 +1,10 @@
-
 export default function Lesson06() {
   // * typescript
   // * string / строка
 
   let username: string = "Umut";
   username = "Dmitrii";
+  console.log(username);
 
   // * number / число
 
