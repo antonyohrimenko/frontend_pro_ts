@@ -1,5 +1,5 @@
-// добавил возможность экспорта интерфейса, 
-// чтобы его переиспользоват в HeroCard 
+// добавил возможность экспорта интерфейса,
+// чтобы его переиспользоват в HeroCard
 export interface IHero {
   id: number;
   name: string;
@@ -26,7 +26,7 @@ export const fellowship: IHero[] = [
     weapons: ["palantir"],
     isDark: true,
     image:
-      "https://img.netzwelt.de/dw1200_dh900_sw1920_sh1440_sx640_sy0_sr4x3_nu2/picture/original/2022/09/herr-ringe-saruman-348842.png",
+      "https://i.medyaradar.net/storage/files/images/2021/10/25/yuzuklerin-efendisi-hakkindaki-bu-d-6Dde.png",
   },
   {
     id: 9,
@@ -49,7 +49,7 @@ export const fellowship: IHero[] = [
     id: 13,
     name: "Gorlum",
     age: 80,
-    weapons: [''],
+    weapons: [],
     isDark: true,
     image:
       "https://root-nation.com/wp-content/uploads/2024/05/lord-of-the-rings-the-hunt-for-gollum-1-675x675.jpg",
@@ -61,6 +61,6 @@ export const fellowship: IHero[] = [
     weapons: ["elf magic"],
     isDark: false,
     image:
-      "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/db20b8ff-541d-4946-8573-057f49b7180f/anim=false,width=450/00025-843486046.jpeg",
+      "https://static.wikia.nocookie.net/pjmidearthfilms/images/2/2c/Mj7pJrBW_400x400.jpg",
   },
 ];
