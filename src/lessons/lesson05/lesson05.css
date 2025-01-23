@@ -7,7 +7,6 @@
   background-color: #f9f9f9;
 }
 
-
 .darkHero {
   background-color: #333;
   color: white;
@@ -33,4 +32,10 @@
   justify-content: center;
   flex-wrap: wrap;
   padding: 1rem;
+}
+
+.heroCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
