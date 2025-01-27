@@ -1,4 +1,4 @@
-export default function SpaceMission() {
+export default function SpaceMission(): JSX.Element {
   const shipName: string = "Apollo 11";
   const crewCount: number = 3;
   const missionStarted: boolean = true;

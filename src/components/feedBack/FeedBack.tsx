@@ -8,7 +8,7 @@ import MyButton from "../myButton/MyButton";
 // Кнопка “Reset Results”, при клике на которую лайки и дизлайки обнуляются.
 // Для кнопок используйте компонент MyButton.
 
-export default function FeedBack() {
+export default function FeedBack(): JSX.Element {
   // пишем наш хук изменения значения лайков и дислайков 🪝
   // function MyButton({ type, func, text })
 

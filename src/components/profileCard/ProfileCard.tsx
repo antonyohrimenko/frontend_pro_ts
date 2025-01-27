@@ -8,7 +8,13 @@ export interface IProfileCard {
   hobby: string;
 }
 
-function ProfileCard({ avatar, firstName, lastName, occupation, hobby }: IProfileCard) {
+function ProfileCard({
+  avatar,
+  firstName,
+  lastName,
+  occupation,
+  hobby,
+}: IProfileCard): JSX.Element {
   return (
     <div className="profile-card">
       <img className="profile-image" src={avatar} alt="Profile" />

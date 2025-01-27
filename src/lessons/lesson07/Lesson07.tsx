@@ -1,4 +1,4 @@
-export default function Lesson07() {
+export default function Lesson07(): JSX.Element {
   // * Interface - типизация Object
 
   interface ISuperHero {
@@ -95,15 +95,12 @@ export default function Lesson07() {
   // makeArray("A", "B");
 
   // добавляем дженерики
-  function makeArray<T>(first: T, second: T):T[] {
+  function makeArray<T>(first: T, second: T): T[] {
     return [first, second];
   }
 
   makeArray(12, 42);
   makeArray("A", "B");
-
-
-  
 
   return (
     <div>

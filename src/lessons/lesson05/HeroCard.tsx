@@ -5,7 +5,7 @@ interface HeroCardProps {
   hero: IHero; // Типизируем проп hero
 }
 
-export default function HeroCard({ hero }: HeroCardProps) {
+export default function HeroCard({ hero }: HeroCardProps): JSX.Element {
   return (
     <div className={`heroCard ${hero.isDark ? "darkHero" : "lightHero"}`}>
       <img src={hero.image} alt={hero.name} className="heroImage" />

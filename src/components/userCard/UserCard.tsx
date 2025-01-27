@@ -5,7 +5,7 @@ interface IUserCardProps {
   age: number;
 }
 
-export default function UserCard(props: IUserCardProps) {
+export default function UserCard(props: IUserCardProps): JSX.Element {
   // функция обработчик
   const handleClick = (): void => {
     alert(`Hallo, ${props.name}!`);

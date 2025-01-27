@@ -2,14 +2,14 @@
 import "./lesson04.css";
 import { useState } from "react";
 
-export default function Lesson04() {
+export default function Lesson04(): JSX.Element {
   const [count, setCount] = useState<number>(1);
 
-  const handlePlus = ():void => {
+  const handlePlus = (): void => {
     setCount((prev) => prev + 1);
   };
 
-  const handleMinus = (): void=> {
+  const handleMinus = (): void => {
     setCount((prev) => prev - 1);
   };
 

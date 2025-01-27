@@ -2,7 +2,7 @@ import { useState } from "react";
 import MyButton from "../../components/myButton/MyButton";
 import "./sandwich.css";
 
-export default function Sandwich() {
+export default function Sandwich(): JSX.Element {
   const [ingredients, setIngredients] = useState<string[]>([]); // Массив ингредиентов
   // создали состояние с пустым массивом изначально типа "строка"
 

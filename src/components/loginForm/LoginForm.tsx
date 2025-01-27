@@ -3,7 +3,7 @@ import MyInput from "../myInput/MyInput.tsx";
 import "./LoginForm.css";
 
 // Функция LoginForm
-export default function LoginForm() {
+export default function LoginForm(): JSX.Element {
   // Типизируем событие для формы
 
   // не уверен что прави

@@ -11,7 +11,7 @@
 // дополнительно сделайте интерфейс - расширяющий город
 // например, добавьте дату основания
 
-export default function City() {
+export default function City(): JSX.Element {
   interface City {
     name: string;
     population: number;

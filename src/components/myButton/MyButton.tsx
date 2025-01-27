@@ -8,7 +8,11 @@ interface IMyButtonProps {
   func: () => void;
 }
 
-export default function MyButton({ type = 'submit', func, text = 'click me!' }: IMyButtonProps) {
+export default function MyButton({
+  type = "submit",
+  func,
+  text = "click me!",
+}: IMyButtonProps): JSX.Element {
   return (
     <button type={type} onClick={func} className="button">
       {text}

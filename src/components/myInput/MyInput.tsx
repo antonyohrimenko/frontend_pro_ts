@@ -17,7 +17,12 @@ interface IMyInput {
   label: string;
 }
 
-export default function MyInput({ name, type, placeholder, label }: IMyInput) {
+export default function MyInput({
+  name,
+  type,
+  placeholder,
+  label,
+}: IMyInput): JSX.Element {
   return (
     <div className="input-group">
       <label htmlFor={name} className="input-label">
