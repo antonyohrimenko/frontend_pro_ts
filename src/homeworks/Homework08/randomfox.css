@@ -1,0 +1,28 @@
+.random-fox-container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Контейнер для изображения или лоадера */
+.image-container {
+  height: 150px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto 20px; 
+}
+
+.fox-wrapper {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fox-wrapper > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}

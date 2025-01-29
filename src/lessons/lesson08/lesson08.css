@@ -1,0 +1,23 @@
+.useEffect-list {
+  list-style: none;
+}
+
+.useEffect-list > li::before {
+  content: "🦦 ";
+}
+
+/* жестка рамка для картинки, чтобы обрезать ее по нужному формату */
+.dog-wrapper {
+  margin: 10px auto 20px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* саму картинку растягиваем по размеру рамки на 100% */
+.dog-wrapper > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}

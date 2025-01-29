@@ -1,4 +1,4 @@
-import "./MyButton.css";
+// import "./MyButton.css";
 
 // переписываем тут на TypeScript компонент кнопки
 
