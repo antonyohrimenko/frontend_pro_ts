@@ -1,21 +1,30 @@
-// import "./MyButton.css";
+import styles from './myButton.module.css';
+import cn from 'classnames';
+// пример отдельного компонента кнопки
+// экспорт по умолчанию написан перед объявлением функции
 
-// переписываем тут на TypeScript компонент кнопки
-
+/// типизация props для кнопки
 interface IMyButtonProps {
-  type?: "button" | "submit" | "reset";
+  // тип кнопки чтобы показывать разные стили
+  variant?: 'primary' | 'danger';
+  // активная кнопка или нет
+  disabled?: boolean;
+  // необязательные ключи
   text?: string;
-  func: () => void;
+  type?: "button" | "submit" | "reset";
+  // обязательный ключ
+  func?: () => void;
 }
 
-export default function MyButton({
-  type = "submit",
-  func,
-  text = "click me!",
-}: IMyButtonProps): JSX.Element {
-  return (
-    <button type={type} onClick={func} className="button">
-      {text}
-    </button>
-  );
+// указали значения по умолчанию для необязательных ключей
+export default function MyButton({ func = () => { }, text = "click me", type = "submit", variant = 'primary', disabled = false }: IMyButtonProps) {
+  return <button
+    className={cn(styles.myButton, {
+      [styles.primary]: variant === 'primary',
+      [styles.danger]: variant === 'danger',
+      [styles.disabled]: disabled === true
+    })}
+    type={type}
+    onClick={func}
+  >{text}</button>;
 }

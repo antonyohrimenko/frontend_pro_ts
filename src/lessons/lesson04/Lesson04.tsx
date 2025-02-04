@@ -1,5 +1,5 @@
 // Используем хуки
-import "./lesson04.css";
+import styles from './lesson04.module.css'
 import { useState } from "react";
 
 export default function Lesson04(): JSX.Element {
@@ -36,7 +36,7 @@ export default function Lesson04(): JSX.Element {
 
       {/* Если в левой части будет true то отобрази то что после &&  */}
       {isVisible && (
-        <div className="counter">
+        <div className={styles.counter}>
           <p>Этот счетчик сделан с помощью UseState()</p>
           <button onClick={handleMinus}> - </button>
           <span> {count} </span>

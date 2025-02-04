@@ -1,14 +1,14 @@
-import "./lesson05.css";
-import { IHero } from "./ fellowship"; // для этого сделал экспорт у интерфейса в fellowship.ts
+import styles from './lesson05.module.css';
+import { IHero } from "./ fellowship";
 
 interface HeroCardProps {
-  hero: IHero; // Типизируем проп hero
+  hero: IHero;
 }
 
 export default function HeroCard({ hero }: HeroCardProps): JSX.Element {
   return (
-    <div className={`heroCard ${hero.isDark ? "darkHero" : "lightHero"}`}>
-      <img src={hero.image} alt={hero.name} className="heroImage" />
+    <div className={`${styles.heroCard} ${hero.isDark ? styles.darkHero : styles.lightHero}`}>
+      <img src={hero.image} alt={hero.name} className={styles.heroImage} />
       <p>
         Hero: <strong>{hero.name}</strong>
       </p>

@@ -1,4 +1,4 @@
-import "./MyInput.css";
+import styles from './myInput.module.css'
 
 interface IMyInput {
   name: string;
@@ -24,8 +24,8 @@ export default function MyInput({
   label,
 }: IMyInput): JSX.Element {
   return (
-    <div className="input-group">
-      <label htmlFor={name} className="input-label">
+    <div className={styles.inputGroup}>
+      <label htmlFor={name} className={styles.inputLabel}>
         {label}
       </label>
       <input
@@ -33,7 +33,7 @@ export default function MyInput({
         name={name}
         type={type}
         placeholder={placeholder}
-        className="input-field"
+        className={styles.inputField}
       />
     </div>
   );

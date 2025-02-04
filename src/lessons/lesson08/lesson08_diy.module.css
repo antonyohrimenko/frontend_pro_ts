@@ -1,0 +1,20 @@
+.randomFoxContainer {
+  text-align: center;
+  padding: 20px;
+}
+
+.foxWrapper {
+  margin: 10px auto 20px;
+  height: 150px; 
+  width: 150px;
+  border-radius: 50%; 
+  overflow: hidden;
+  border: 2px solid #ddd; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.foxWrapper > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./lesson08_diy.css";
+import styles from './lesson08_diy.module.css'
 import MyButton from "../../components/myButton/MyButton";
 
 export default function RandomFox() {
@@ -34,10 +34,10 @@ export default function RandomFox() {
   }, []);
 
   return (
-    <div className="random-fox-container">
+    <div className={styles.randomFoxContainer}>
       <h2>Random Fox 🦊</h2>
       {foxImage ? (
-        <div className="fox-wrapper">
+        <div className={styles.foxWrapper}>
           <img src={foxImage} alt="some random fox" />
         </div>
       ) : (

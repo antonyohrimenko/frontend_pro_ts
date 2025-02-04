@@ -1,10 +1,10 @@
-.random-fox-container {
+.randomFoxContainer {
   text-align: center;
   padding: 20px;
 }
 
 /* Контейнер для изображения или лоадера */
-.image-container {
+.imageContainer {
   height: 150px; 
   display: flex;
   justify-content: center;
@@ -12,7 +12,7 @@
   margin: 10px auto 20px; 
 }
 
-.fox-wrapper {
+.foxWrapper {
   height: 150px;
   width: 150px;
   border-radius: 50%;
@@ -21,7 +21,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.fox-wrapper > img {
+.foxWrapper > img {
   object-fit: cover;
   height: 100%;
   width: 100%;

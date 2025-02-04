@@ -1,4 +1,4 @@
-import "./profilecard.css";
+import styles from "./profileCard.module.css";
 
 export interface IProfileCard {
   avatar: string;
@@ -16,23 +16,23 @@ function ProfileCard({
   hobby,
 }: IProfileCard): JSX.Element {
   return (
-    <div className="profile-card">
-      <img className="profile-image" src={avatar} alt="Profile" />
-      <div className="profile-info">
-        <p className="profile-info-title">Имя:</p>
-        <p className="profile-info-text">{firstName}</p>
+    <div className={styles.profileCard}>
+      <img className={styles.profileImage} src={avatar} alt="Profile" />
+      <div className={styles.profileInfo}>
+        <p className={styles.profileInfoTitle}>Имя:</p>
+        <p className={styles.profileInfoText}>{firstName}</p>
       </div>
-      <div className="profile-info">
-        <p className="profile-info-title">Фамилия:</p>
-        <p className="profile-info-text">{lastName}</p>
+      <div className={styles.profileInfo}>
+        <p className={styles.profileInfoTitle}>Фамилия:</p>
+        <p className={styles.profileInfoText}>{lastName}</p>
       </div>
-      <div className="profile-info">
-        <p className="profile-info-title">Род деятельности:</p>
-        <p className="profile-info-text">{occupation}</p>
+      <div className={styles.profileInfo}>
+        <p className={styles.profileInfoTitle}>Род деятельности:</p>
+        <p className={styles.profileInfoText}>{occupation}</p>
       </div>
-      <div className="profile-info">
-        <p className="profile-info-title">Хобби:</p>
-        <p className="profile-info-text">{hobby}</p>
+      <div className={styles.profileInfo}>
+        <p className={styles.profileInfoTitle}>Хобби:</p>
+        <p className={styles.profileInfoText}>{hobby}</p>
       </div>
     </div>
   );

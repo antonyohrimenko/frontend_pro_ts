@@ -1,10 +1,10 @@
 import "./App.css";
-import RandomFox from "./homeworks/Homework08/Randomfox";
+import RandomFoxHW from "./homeworks/Homework08/RandomfoxHW";
 
 function App() {
   return (
     <>
-      <RandomFox />
+      <RandomFoxHW />
     </>
   );
 }

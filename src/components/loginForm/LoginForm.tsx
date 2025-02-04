@@ -1,6 +1,6 @@
 import MyButton from "../myButton/MyButton";
 import MyInput from "../myInput/MyInput.tsx";
-import "./LoginForm.css";
+import styles from './loginForm.module.css'
 
 // Функция LoginForm
 export default function LoginForm(): JSX.Element {
@@ -13,7 +13,7 @@ export default function LoginForm(): JSX.Element {
   };
 
   return (
-    <form className="login-form" onSubmit={handleSubmit}>
+    <form className={styles.loginForm} onSubmit={handleSubmit}>
       <MyInput
         name="login"
         type="text"

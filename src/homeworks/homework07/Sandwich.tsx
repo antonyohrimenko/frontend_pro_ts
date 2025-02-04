@@ -1,6 +1,6 @@
 import { useState } from "react";
 import MyButton from "../../components/myButton/MyButton";
-import "./sandwich.css";
+import styles from './sandwich.module.css'
 
 export default function Sandwich(): JSX.Element {
   const [ingredients, setIngredients] = useState<string[]>([]); // Массив ингредиентов
@@ -19,7 +19,7 @@ export default function Sandwich(): JSX.Element {
     <div>
       <h2> Делаем простенький сендвич на хуках 🍔</h2>
       <img
-        className="image"
+        className={styles.image}
         src="https://papparoti.ca/wp-content/uploads/2016/12/Sandwich-AvocadoBLT-1024x683.jpg"
         alt="Sandwich"
       />

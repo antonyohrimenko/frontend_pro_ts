@@ -1,4 +1,4 @@
-.profile-card {
+.profileCard {
     max-width: 400px;
     margin: 20px auto;
     padding: 20px;
@@ -10,7 +10,7 @@
     background-color: #f9f9f9;
   }
   
-  .profile-image {
+  .profileImage {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -19,18 +19,18 @@
     margin: 0 auto 20px auto; /* Центрируем изображение и добавляем отступ */
   }
   
-  .profile-info {
+  .profileInfo {
     margin-bottom: 10px; /* Отступы между блоками информации */
   }
   
-  .profile-info-title {
+  .profileInfoTitle {
     font-weight: bold;
     font-size: 14px;
     text-decoration: underline;
     margin-bottom: 5px; /* Отступ между заголовком и текстом */
   }
   
-  .profile-info-text {
+  .profileInfoText {
     font-size: 14px;
     color: #555;
     margin: 0; /* Убираем отступы внутри текста */

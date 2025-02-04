@@ -1,0 +1,23 @@
+.useEffectList {
+  list-style: none;
+}
+
+.useEffectList > li::before {
+  content: "🦦";
+}
+
+
+.dogWrapper {
+  margin: 10px auto 20px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.dogWrapper > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
