@@ -1,0 +1,29 @@
+.counter {
+  margin-top: 10px;
+}
+
+.button {
+  margin: 10px;
+}
+
+.counter > span {
+  margin: 0, 10px;
+  font-weight: bold;
+}
+
+/* Цветовые классы для текста */
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.blue {
+  color: blue;
+}
+
+.black {
+  color: black; /* Цвет наш по дефолту */
+}

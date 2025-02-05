@@ -38,15 +38,15 @@ export default function Lesson04(): JSX.Element {
       {isVisible && (
         <div className={styles.counter}>
           <p>Этот счетчик сделан с помощью UseState()</p>
-          <button onClick={handleMinus}> - </button>
+          <button className={styles.button} onClick={handleMinus}> - </button>
           <span> {count} </span>
-          <button onClick={handlePlus}> + </button>
+          <button className={styles.button} onClick={handlePlus}> + </button>
         </div>
       )}
 
-      <button> Red </button>
-      <button> Green </button>
-      <button> Blue </button>
+      <button className={styles.button}> Red </button>
+      <button className={styles.button}> Green </button>
+      <button className={styles.button}> Blue </button>
     </div>
   );
 }

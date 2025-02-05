@@ -1,3 +1,5 @@
+import styles from "./spacemission.module.css";
+
 export default function SpaceMission(): JSX.Element {
   const shipName: string = "Apollo 11";
   const crewCount: number = 3;
@@ -10,7 +12,7 @@ export default function SpaceMission(): JSX.Element {
   }
 
   return (
-    <div>
+    <div className={styles.sidebar}>
       <h2>Название миссии: {shipName}</h2>
       <p>Количество экипажа: {crewCount}</p>
       <p>Миссия началась: {missionStarted ? "Да" : "Нет"}</p>
