@@ -1,0 +1,99 @@
+.lessonContainer {
+    padding: 20px;
+    text-align: center;
+    min-height: 100vh;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #2c3e50;
+    font-weight: bold;
+  }
+  
+  /* Контейнер с фактами: ограничение высоты 700px и скролл */
+  .factsContainer {
+    max-height: 700px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Карточка факта */
+  .factCard {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .factCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Изображение кота круглолицего */
+  .catImage {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+    transition: border-color 0.3s ease;
+  }
+  
+  .factCard:hover .catImage {
+    border-color: #3498db;
+  }
+  
+  /* Текст факта */
+  .catFact {
+    font-size: 16px;
+    color: #555;
+    text-align: left;
+    flex: 1;
+    margin: 0;
+  }
+  
+  /* Кнопки */
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+  }
+  

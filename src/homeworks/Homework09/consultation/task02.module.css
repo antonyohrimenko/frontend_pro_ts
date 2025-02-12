@@ -1,0 +1,33 @@
+.productList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: lightblue;
+    padding: 20px;
+    margin: 0;
+}
+
+.productCard{
+    background-color: white;
+    width: 350px;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.title, .price{
+    font-weight: bold;
+    color: black;
+    margin: 10px 0; 
+    width: 100%; 
+    text-align: center;
+    
+}
+.image{
+    width: 200px;
+    margin-bottom: 15px;
+}
