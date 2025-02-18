@@ -12,6 +12,7 @@ export default function AuthForms(): JSX.Element {
 
       {isRegister ? (
         <Formik
+        key='register'
           initialValues={{
             username: "",
             email: "",
@@ -24,7 +25,7 @@ export default function AuthForms(): JSX.Element {
             console.log("Регистрация :", values);
           }}
         >
-          {({ isSubmitting }) => (
+          {({ isSubmitting}) => (
             <Form className={styles.form}>
               <div>
                 <Field
@@ -95,6 +96,7 @@ export default function AuthForms(): JSX.Element {
         </Formik>
       ) : (
         <Formik
+        key='login'
           initialValues={{
             email: "",
             password: "",
@@ -105,7 +107,7 @@ export default function AuthForms(): JSX.Element {
             console.log("Вход:", values);
           }}
         >
-          {({ isSubmitting, resetForm }) => (
+          {({ isSubmitting}) => (
             <Form className={styles.form}>
               <div>
                 <Field
@@ -149,7 +151,8 @@ export default function AuthForms(): JSX.Element {
       )}
 
       <button
-        onClick={() => setIsRegister(!isRegister)}
+        onClick={() => 
+          setIsRegister(!isRegister)}
         className={styles.switchButton}
       >
         {isRegister
