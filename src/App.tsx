@@ -15,6 +15,8 @@ import Homework05 from "./homeworks/Homework05/Homework05";
 import FormGender from "./homeworks/Homework12/FormGender";
 import Lesson12 from "./lessons/lesson12/Lesson12";
 import Homework11 from "./homeworks/Homework11/Homework11";
+import Lesson13 from "./lessons/lesson13/Lesson13";
+import AuthForms from "./homeworks/Homework13/AuthForms";
 
 function App() {
   return (
@@ -38,6 +40,7 @@ function App() {
         <Route path="lesson08" element={<Lesson08 />} />
         <Route path="lesson09" element={<Lesson09 />} />
         <Route path="lesson12" element={<Lesson12 />} />
+        <Route path="lesson13" element={<Lesson13 />} />
 
 
         <Route path="homework05" element={<Homework05 />} />
@@ -46,6 +49,8 @@ function App() {
         <Route path="homework08" element={<RandomFoxHW />} />
         <Route path="homework11" element={<Homework11 />} />
         <Route path="homework12" element={<FormGender />} />
+        <Route path="homework13" element={<AuthForms />} />
+
 
         <Route path="*" element={<NoPage/>}/>
         

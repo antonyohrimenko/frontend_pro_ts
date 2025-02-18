@@ -47,7 +47,7 @@ export default function FormGender(): JSX.Element {
 
       {/* Форма для ввода данных*/}
       <form onSubmit={formik.handleSubmit} className={styles.form}>
-        <input
+        <input className={styles.input}
           type="text"
           name="name"
           value={formik.values.name}
@@ -55,7 +55,7 @@ export default function FormGender(): JSX.Element {
           placeholder="Enter a name"
           required
         />
-        <button type="submit" disabled={isLoading}>
+        <button className={styles.button} type="submit" disabled={isLoading}>
           {isLoading ? "Loading..." : "Submit"}
         </button>
       </form>

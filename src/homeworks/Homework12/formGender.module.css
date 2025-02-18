@@ -12,7 +12,7 @@
     margin-bottom: 20px;
   }
   
-  input {
+  .input {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -20,7 +20,7 @@
     width: 200px;
   }
   
-  button {
+  .button {
     padding: 10px 20px;
     font-size: 16px;
     border: none;
@@ -31,12 +31,12 @@
     transition: background-color 0.3s ease;
   }
   
-  button:disabled {
+  .button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
   }
   
-  button:hover:not(:disabled) {
+  .button:hover:not(:disabled) {
     background-color: #0056b3;
   }
   

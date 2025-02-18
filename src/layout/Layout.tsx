@@ -11,6 +11,19 @@ export default function Layout() {
         {/* Добавил панель навигации, хз удобно или нет, если что потом переделаю  :) */}
         <aside className={styles.sidebar}>
           <ul>
+
+          <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? styles.linkActive : ""
+                }
+                to="homework13"
+              >
+                Homework: Lesson13
+              </NavLink>
+            </li>
+
+
           <li>
               <NavLink
                 className={({ isActive }) =>
@@ -98,6 +111,18 @@ export default function Layout() {
                 Homework: Lesson05
               </NavLink>
             </li>
+
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? styles.linkActive : ""
+                }
+                to="lesson13"
+              >
+                Classwork: Lesson13
+              </NavLink>
+            </li>
+
 
             <li>
               <NavLink
