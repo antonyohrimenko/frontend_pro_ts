@@ -31,7 +31,7 @@ export default function Layout() {
                 }
                 to="homework12"
               >
-                Homework: FormGender
+                Homework: Lesson12
               </NavLink>
             </li>
 
@@ -109,6 +109,17 @@ export default function Layout() {
                 to="homework05"
               >
                 Homework: Lesson05
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? styles.linkActive : ""
+                }
+                to="lesson14"
+              >
+                Classwork: Lesson14
               </NavLink>
             </li>
 

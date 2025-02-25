@@ -17,10 +17,16 @@ import Lesson12 from "./lessons/lesson12/Lesson12";
 import Homework11 from "./homeworks/Homework11/Homework11";
 import Lesson13 from "./lessons/lesson13/Lesson13";
 import AuthForms from "./homeworks/Homework13/AuthForms";
+import Lesson14 from "./lessons/lesson14/Lesson14";
+import ProductPage from "./components/productPage/ProductPage";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
-    // оборачиваем все приложение в особый компонент HashRouter из библиотеки React Router
+    // ! обернули все приложение в CartProvider с контекстом чтобы иметь доступ к данным корзины
+    <CartProvider>
+      {/* оборачиваем все приложение в особый компонент HashRouter из библиотеки React Router */}
+    {/* // оборачиваем все приложение в особый компонент HashRouter из библиотеки React Router */}
     <HashRouter>
       {/* оборачиваем компонент Routes (пути вокруг всех элементов) */}
       <Routes>
@@ -41,6 +47,8 @@ function App() {
         <Route path="lesson09" element={<Lesson09 />} />
         <Route path="lesson12" element={<Lesson12 />} />
         <Route path="lesson13" element={<Lesson13 />} />
+        <Route path="lesson14" element={<Lesson14 />} />
+        <Route path="lesson14/:id" element={<ProductPage />} />
 
 
         <Route path="homework05" element={<Homework05 />} />
@@ -57,6 +65,7 @@ function App() {
         </Route>
       </Routes>
     </HashRouter>
+  </CartProvider>
   );
 }
 

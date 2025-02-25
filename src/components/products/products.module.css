@@ -1,0 +1,42 @@
+.gridContainer {
+  padding: 0 20px;
+  width: 100%;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-bottom: 10px;
+}
+
+/* Стили для поля ввода */
+.inputField {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 35px;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+/* Стили для кнопки */
+.submitButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
+}
+
+/* Стили для ошибок */
+.errorText {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
