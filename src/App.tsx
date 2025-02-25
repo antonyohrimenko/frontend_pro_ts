@@ -20,11 +20,13 @@ import AuthForms from "./homeworks/Homework13/AuthForms";
 import Lesson14 from "./lessons/lesson14/Lesson14";
 import ProductPage from "./components/productPage/ProductPage";
 import { CartProvider } from "./context/CartContext";
+import { FavoritesProvider } from "./context/FavoritesContext";
 
 function App() {
   return (
     // ! обернули все приложение в CartProvider с контекстом чтобы иметь доступ к данным корзины
     <CartProvider>
+      <FavoritesProvider>
       {/* оборачиваем все приложение в особый компонент HashRouter из библиотеки React Router */}
     {/* // оборачиваем все приложение в особый компонент HashRouter из библиотеки React Router */}
     <HashRouter>
@@ -65,6 +67,7 @@ function App() {
         </Route>
       </Routes>
     </HashRouter>
+    </FavoritesProvider>
   </CartProvider>
   );
 }
