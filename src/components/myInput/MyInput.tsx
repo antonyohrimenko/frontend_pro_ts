@@ -1,40 +1,24 @@
-import styles from './myInput.module.css'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import styles from './myInput.module.css';
+import { FormikProps } from 'formik';
 
-interface IMyInput {
+interface IMyInputProps {
   name: string;
-  type:
-    | "text"
-    | "password"
-    | "radio"
-    | "checkbox"
-    | "hidden"
-    | "image"
-    | "file"
-    | "submit"
-    | "reset"
-    | "email";
+  type: 'password' | 'text' | 'number' | 'email';
   placeholder: string;
   label: string;
+  formik: FormikProps<any>;
 }
 
-export default function MyInput({
-  name,
-  type,
-  placeholder,
-  label,
-}: IMyInput): JSX.Element {
+function MyInput({ name, type, placeholder, label, formik }: IMyInputProps) {
   return (
-    <div className={styles.inputGroup}>
-      <label htmlFor={name} className={styles.inputLabel}>
-        {label}
-      </label>
-      <input
-        id={name}
-        name={name}
-        type={type}
-        placeholder={placeholder}
-        className={styles.inputField}
-      />
+    <div className={styles.inputContainer}>
+      {/* если у нас будет ошибка, то label заменится на ее текст */}
+      {formik.errors[name] ? <label className={styles.error} htmlFor={name}>{formik.errors[name] as string}</label> : <label htmlFor={name}>{label}</label>}
+      {/* мы используем значение для ключа из переменной name потому что они с value должны совпадать */}
+      <input value={formik.values[name]} onChange={formik.handleChange} placeholder={placeholder} name={name} type={type} />
     </div>
   );
 }
+
+export default MyInput;

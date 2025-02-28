@@ -117,6 +117,17 @@ export default function Layout() {
                 className={({ isActive }) =>
                   isActive ? styles.linkActive : ""
                 }
+                to="lesson16"
+              >
+                Classwork: Lesson16
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? styles.linkActive : ""
+                }
                 to="lesson14"
               >
                 Classwork: Lesson14

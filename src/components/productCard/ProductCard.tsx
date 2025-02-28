@@ -47,7 +47,7 @@ export default function ProductCard({
           text="add to cart"
           variant="danger"
         />
-        <span onClick={handleFavoriteClick} style={{ marginLeft: 20}}>
+        <span onClick={handleFavoriteClick} style={{ marginLeft: 20, cursor: "pointer"}}>
           {isFavorite(id) ? "❤️" : "🤍"}
         </span>
       </section>
