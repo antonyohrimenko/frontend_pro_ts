@@ -22,10 +22,13 @@ import ProductPage from "./components/productPage/ProductPage";
 import { CartProvider } from "./context/CartContext";
 import { FavoritesProvider } from "./context/FavoritesContext";
 import Lesson16 from "./lessons/lesson16/Lesson16";
+import { Provider } from "react-redux";
+import { store } from "./app/store";
 
 function App() {
   return (
     // ! обернули все приложение в CartProvider с контекстом чтобы иметь доступ к данным корзины
+    <Provider store={store}>
     <FavoritesProvider>
       <CartProvider>
         {/* оборачиваем все приложение в особый компонент HashRouter из библиотеки React Router */}
@@ -68,6 +71,7 @@ function App() {
         </HashRouter>
       </CartProvider>
     </FavoritesProvider>
+    </Provider>
   );
 }
 

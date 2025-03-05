@@ -1,10 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import styles from "./products.module.css";
 import ProductCard from "../productCard/ProductCard";
 import Cart from "../cart/Cart";
 import Loader from "../../homeworks/Homework08/Loader";
 import * as Yup from "yup";
 import { useFormik } from "formik";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import {
+  loadLimitedProducts,
+  loadProducts,
+} from "../../features/productsAction";
 
 // описал один экземпляр данных в массиве из API
 export interface IProduct {
@@ -20,12 +25,18 @@ export interface IProduct {
 }
 
 export default function Products(): JSX.Element {
-  const [products, setProducts] = useState<IProduct[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [limit, setLimit] = useState(3); // установил базовый для 3 карточек
+  const {
+    products: reduxProducts,
+    error,
+    isLoading,
+  } = useAppSelector((state) => state.products);
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(loadProducts());  // всегда отрисовываем все товары из API. Можно заменить на лимитный
+  }, [dispatch]);
 
   // описываю схему
-
   const validationSchema = Yup.object().shape({
     limit: Yup.number()
       .typeError("Нужно ввести число")
@@ -36,38 +47,15 @@ export default function Products(): JSX.Element {
   });
 
   // добавляем формик
-
   const formik = useFormik({
     initialValues: {
       limit: 3,
     },
-    validationSchema: validationSchema, // можно в целом так и не писать, а просто validationSchema
+    validationSchema: validationSchema,
     onSubmit: (values) => {
-      setLimit(values.limit);
+      dispatch(loadLimitedProducts(values.limit)); // Вызов c нашим лимитом
     },
   });
-
-  const getProducts = async () => {
-    try {
-      setIsLoading(true);
-      const res = await fetch(
-        `https://fakestoreapi.com/products?limit=${limit}`
-      );
-      if (!res.ok) {
-        throw new Error(`Ошибка при загрузке данных: ${res.status}`);
-      }
-      const data: IProduct[] = await res.json();
-      setProducts(data);
-    } catch (error) {
-      console.error("Ошибка при загрузке продуктов:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    getProducts();
-  }, [limit]);
 
   return (
     <>
@@ -75,8 +63,11 @@ export default function Products(): JSX.Element {
       <div className={styles.formContainer}>
         <form onSubmit={formik.handleSubmit}>
           <div>
-            <label><strong>Количество товаров:</strong></label>
-            <input className={styles.inputField}
+            <label>
+              <strong>Количество товаров:</strong>
+            </label>
+            <input
+              className={styles.inputField}
               type="text"
               id="limit"
               name="limit"
@@ -89,7 +80,7 @@ export default function Products(): JSX.Element {
             ) : null}
           </div>
           <button type="submit" className={styles.submitButton}>
-            Refresh
+            Выводим лимит через Redux
           </button>
         </form>
       </div>
@@ -99,7 +90,7 @@ export default function Products(): JSX.Element {
         </div>
       ) : (
         <div className={styles.gridContainer}>
-          {products.map((product) => (
+          {reduxProducts.map((product) => (
             <ProductCard
               key={product.id}
               title={product.title}
